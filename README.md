@@ -1,2 +1,2 @@
-# Advanced-CPP
-some advanced knowledge about C++
+# Data structure and algorithm
+
