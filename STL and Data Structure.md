@@ -848,7 +848,7 @@ int main(){
 
 C++11中新添加了unordered_map类，使其可以不对数据进行排序，从而节省了大量时间。
 
-<span id = "map"></span>
+<span id = "queue"></span>
 
 #### queue类
 
@@ -941,7 +941,7 @@ int main(){
 
 除了一般的queue类外，还有一种双端队列deque，这种队列首尾都可以进行插入和删除操作；还有另一种队列priority_queue队列，这种队列是通过堆实现的默认将当前最大元素放在队首的一种队列。
 
-<span id = "map"></span>
+<span id = "stack"></span>
 
 #### stack类
 
