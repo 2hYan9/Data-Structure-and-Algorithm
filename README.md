@@ -18,5 +18,5 @@
 - [二叉查找树](./STL%20and%20Data%20Structure.md#bst)：二叉查找树的实现以及关于二叉查找树的相关操作的实现  
 - [平衡二叉树](./STL%20and%20Data%20Structure.md#AVL_tree)：将一个二叉查找树调整成为“平衡”的二叉查找树  
 - [并查集](./STL%20and%20Data%20Structure.md#union_and_find_set)：一种用于维护集合的数据结构  
-- [堆](./STL%20and%20Data%20Structure.md#heap)：堆的定义，以及一些常见方法的实现  
-- [priority_queue类](./STL%20and%20Data%20Structure.md#priority_queue)：优先队列的特性是优先级最高的元素始终放在队首，C++中的priority_queue类的底层是通过堆来实现的  
+- [堆](./STL%20and%20Data%20Structure.md#heap)：堆的定义，以及一些常见方法和堆排序的实现  
+- [priority_queue类](./STL%20and%20Data%20Structure.md#priority_queue)：优先队列的特性是优先级最高的元素始终放在队首，priority_queue类的底层是通过堆来实现的  
