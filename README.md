@@ -9,7 +9,7 @@
 - [set类](./STL%20and%20Data%20Structure.md#set)：set类的特性是自动去重并排序  
 - [string类](./STL%20and%20Data%20Structure.md#string)：string是C++中比较常用的字符串类型  
 - [map类](./STL%20and%20Data%20Structure.md#map)：可以将map类看作是一种关联数组，即用于存储从一种类型到另一种类型的映射的“键-值”对数组  
-- [queue类](./STL%20and%20Data%20Structure.md#queue)：队列特性是“先进先出”，用push()方法添加数据，front()和back()方法访问队首和队尾，pop()方法删除队首  
+- [queue类](./STL%20and%20Data%20Structure.md#queue)：队列特性是“先进先出”，用push()方法添加数据，front()和back()方法访问队首队尾，pop()方法删除队首  
 - [stack类](./STL%20and%20Data%20Structure.md#stack)：栈的特性是“先进后出”，用push()方法添加数据，top()方法访问队首，然后使用pop()方法删除栈顶元素  
 - [栈和队列的应用](./STL%20and%20Data%20Structure.md#stack&queue)：栈与队列的使用示例，使用栈和队列实现一个简单的计算器  
 - [链表的处理](./STL%20and%20Data%20Structure.md#linked_table)：C++中动态链表的创建以及一些常见操作的实现  
