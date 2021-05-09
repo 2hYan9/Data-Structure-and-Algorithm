@@ -206,7 +206,14 @@ int main() {
 
 所以如果要清空一个vector容器中的所有元素，`vi.clear()`和`vi.erase(vi.begin(), vi.end())`方法是等价的。
 
+>使用一个已有的vector类对象给一个新创建的类赋值的方法：
+>```c++
+>vector<int> v1;
+>v1.assign(v2.begin(), v2.end());
+>```
+
 在一些元素个数不确定的场景下使用vector能够很好的节省空间。
+
 
 <span id = "set"></span>
 
