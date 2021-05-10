@@ -1643,7 +1643,7 @@ int main(){
 
 例如下面这个例子，一个三层的满二叉树：
 
-![](C:\Users\19021\Pictures\tree.png)
+![](image/tree.png)
 
 那么使用上面的哪三种遍历方法对这个树进行遍历输出的结果依次为：
 
@@ -2425,7 +2425,7 @@ int getBalanceFactor(node * root){
 
 图示如下
 
-![](C:\Users\19021\Pictures\LeftRotate.png)
+![](image/LeftRotate.png)
 
 代码实现如下：
 
@@ -2448,7 +2448,7 @@ void leftRotate(node * &root){
 
 图示如下
 
-![](C:\Users\19021\Pictures\rightRotate.png)
+![](image/rightRotate.png)
 
 代码实现如下：
 
@@ -2474,7 +2474,7 @@ void rightRotate(node * &root){
 
 如下图：
 
-![](C:\Users\19021\Pictures\AVLcase.png)
+![](image/AVLcase.png)
 
 从上面的图可以发现：
 
