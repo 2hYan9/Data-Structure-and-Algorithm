@@ -1001,7 +1001,7 @@ int main(){
 
 上面个的代码中创建了两个数组，分别用于存储左边Ｐ字符的总个数和右边Ｔ字符的总个数。
 
-<span id = "random_selete"></span>
+<span id = "random_select"></span>
 
 #### 随机选择
 
