@@ -38,6 +38,7 @@
 >而确定一个随机生成的点是否在这个矩阵的内接圆内的方法是：计算这个点到圆心的距离是否小于或等于该内接圆的半径  
 >当然，在实现这个算法的时候并不需要开一个矩阵的空间，因为这里只需要直到落在圆内的点的个数，实际实现需要使用到[随机选择](./Algorithm%20Notes%20I.md#random_select)这一部分的内容，具体代码如下：  
 >```c++
+>#include <iostream>
 >#include <ctime>
 >#include <cstdlib>
 >#include <cmath>
