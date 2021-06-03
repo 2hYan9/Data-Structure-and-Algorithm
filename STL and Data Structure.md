@@ -1618,7 +1618,7 @@ int main(){
 
 例如下面这个例子，一个三层的满二叉树：
 
-![](C:\Users\19021\Pictures\tree.png)
+![](./image/tree.png)
 
 那么使用上面的哪三种遍历方法对这个树进行遍历输出的结果依次为：
 
@@ -2397,7 +2397,7 @@ int getBalanceFactor(node * root){
 
 图示如下
 
-![](C:\Users\19021\Pictures\LeftRotate.png)
+![LeftRotate](./image/LeftRotate.png)
 
 代码实现如下：
 
@@ -2420,7 +2420,7 @@ void leftRotate(node * &root){
 
 图示如下
 
-![](C:\Users\19021\Pictures\rightRotate.png)
+![RightRotate](./image/rightRotate.png)
 
 代码实现如下：
 
@@ -2446,7 +2446,7 @@ void rightRotate(node * &root){
 
 如下图：
 
-![](C:\Users\19021\Pictures\AVLcase.png)
+![](./image/AVLcase.png)
 
 从上面的图可以发现：
 
@@ -2915,7 +2915,7 @@ int main(){
 
 通过先后两次的中序遍历和先序遍历序列，可以将树的结构恢复出来：
 
-![](C:\Users\19021\Pictures\heap.png)
+![heap](./image/heap.png)
 
 > 在上面的这段代码中需要注意的是，因为在调整节点位置的时候整个树已经建立好了，所以这里的递归是先递归到叶子节点，然后再执行交换操作。
 
