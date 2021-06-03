@@ -771,7 +771,7 @@ int main(){
 
 下面是归并排序的一个图示：
 
-![Merge Sort](C:\Users\19021\Pictures\merge_sort.png)
+![Merge Sort](./image/merge_sort.png)
 
 不难看出，如果在合并过程中使用two pointers思想的话，那么归并排序的时间复杂度为`O(nlogn)`
 
