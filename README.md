@@ -1,7 +1,7 @@
 # Data structure and algorithm
 一些关于C++中的数据结构与算法的笔记。  
   
-文件"[STL and Data Struecture](./STL%20and%20Data%20Structure)" 主要是一些常用的STL模板类的使用说明，包括声明一个标准模板类的对象，并且访问这个对象里的数据，以及以及一些常用的方法。  
+文件"[STL and Data Struecture](./STL%20and%20Data%20Structure.md)" 主要是一些常用的STL模板类的使用说明，包括声明一个标准模板类的对象，并且访问这个对象里的数据，以及以及一些常用的方法。  
 除了STL，这个文件中还包括一些其他的数据结构的笔记，比如树、二叉树、二叉查找树、平衡树AVL_tree、以及堆的笔记。这些笔记的内容主要是如何实现这些数据结构以及其相关操作，包括创建一个这样的数据结构、访问这个数据结构中的数据、增删某个数据结构中的数据。  
   
 "STL and Data Structure" 的目录：
@@ -21,7 +21,7 @@
 - [堆](./STL%20and%20Data%20Structure.md#heap)：堆的定义，以及一些常见方法和堆排序的实现  
 - [priority_queue类](./STL%20and%20Data%20Structure.md#priority_queue)：优先队列的特性是优先级最高的元素始终放在队首，priority_queue类的底层是通过堆来实现的  
   
-文件“[Algorithm Notes I](./Algorithm%20Notes%20I)”的主要内容是一些算法的笔记，描述了一些常见的算法，以及这些算法的使用实例。该文件的目录如下：
+文件“[Algorithm Notes I](./Algorithm%20Notes%20I.md)”的主要内容是一些算法的笔记，描述了一些常见的算法，以及这些算法的使用实例。该文件的目录如下：
 - [排序算法](./Algorithm%20Notes%20I.md#sort)：介绍了一些时间复杂度为`O(n^2)`的排序算法，包括冒泡排序，选择排序和插入排序
 - [关于散列](./Algorithm%20Notes%20I.md#hash)：对散列思想以及一些常规的散列算法进行了一个简单的介绍
 - [递归算法](./Algorithm%20Notes%20I.md#recursion)：这部分内容主要是介绍递归算法，通过递归算法解决全排列问题以及“n-皇后”问题
