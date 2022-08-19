@@ -257,8 +257,8 @@ $$
 比如说有下面这样的一个递归式：
 $$
 T(n) = \begin{cases}
-d & if\space n=1 \\
-aT(n/b) + f(n) & if\space n>1 \\
+d & if\space n=1 \\ 
+aT(n/b) + f(n) & if\space n>1 \\ 
 \end{cases}
 $$
 在这个式子中，原问题被分解为a个子问题，每个子问题的规模为原来的 1/b 倍，而将这个a个子问题的解合并成原问题的解需要的时间为f(n)，而解决一个base case所需的时间为常数d。
@@ -266,9 +266,9 @@ $$
 最容易想到的方法就是对递归式进行展开：
 $$
 \begin{align}
-T(n) &=aT(\frac{n}{b}) + f(n) \\
-T(\frac{n}{b})&=a(\frac{n}{b^2}) + f(\frac{n}{b}) \\
-\cdots \\
+T(n) &=aT(\frac{n}{b}) + f(n) \\ 
+T(\frac{n}{b})&=a(\frac{n}{b^2}) + f(\frac{n}{b}) \\ 
+\cdots \\ 
 T(n)&=a^kT(\frac{n}{b^k})+\sum_{i=0}^{k}a^if(\frac{n}{b^i})
 \end{align}
 $$
@@ -286,7 +286,7 @@ substitution method通常用于证明渐进上界和渐进下界，当然也可�
 $$
 f(n) = 
 \begin{cases}
-d & if\space n = 1\\
+d & if\space n = 1 \\
 f(\lfloor n/2\rfloor)+f(\lceil n/2 \rceil) + bn & if\space n\ge 2
 \end{cases}
 $$
@@ -303,20 +303,20 @@ $f(n) \le cbn\log n + dn$，其中 *c* 为大于0的常数，并且接下来将�
 假设上面猜测的结果在$n\ge 2$时，对于$\lfloor n/2 \rfloor$和$\lceil n/2 \rceil$是成立的，那么我们将其带入原式子右边的子式子可得：
 $$
 \begin{align}
-f(n)  = & f(\lfloor n/2 \rfloor) + f(\lceil n/2 \rceil) + bn\\
-\le & cb\lfloor n/2 \rfloor\log (\lfloor n/2 \rfloor) + d\lfloor n/2\rfloor + cb\lceil n/2 \rceil\log (\lceil n/2 \rceil) +d\lceil n/2 \rceil + bn\\
-\le&cb\lfloor n/2 \rfloor\log (\lceil n/2 \rceil) + cb\lceil n/2 \rceil\log (\lceil n/2 \rceil) + dn + bn\\
-=&cbn\log(\lceil n/2 \rceil) + dn + bn\\
-\le&cbn\log ((n+1)/2) + dn + bn\\
+f(n)  = & f(\lfloor n/2 \rfloor) + f(\lceil n/2 \rceil) + bn \\ 
+\le & cb\lfloor n/2 \rfloor\log (\lfloor n/2 \rfloor) + d\lfloor n/2\rfloor + cb\lceil n/2 \rceil\log (\lceil n/2 \rceil) +d\lceil n/2 \rceil + bn \\ 
+\le&cb\lfloor n/2 \rfloor\log (\lceil n/2 \rceil) + cb\lceil n/2 \rceil\log (\lceil n/2 \rceil) + dn + bn \\ 
+=&cbn\log(\lceil n/2 \rceil) + dn + bn \\ 
+\le&cbn\log ((n+1)/2) + dn + bn \\ 
 =&cbn\log (n+1) - cbn + dn + bn
 \end{align}
 $$
 欲使前面的假设成立，则有：
 $$
 \begin{align}
-cbn\log (n+1) - cbn + dn + bn \le& cbn\log n + dn\\
-cbn\log(n+1) - cbn + bn \le& cbn\log n\\
-c\log (n+1) -c + 1\le& c\log n\\
+cbn\log (n+1) - cbn + dn + bn \le& cbn\log n + dn \\ 
+cbn\log(n+1) - cbn + bn \le& cbn\log n \\ 
+c\log (n+1) -c + 1\le& c\log n \\ 
 c\ge& \frac{1}{1 + \log n - \log(n+1)} = \frac{1}{1 + \log\frac{n}{n+1}}
 \end{align}
 $$
@@ -333,8 +333,8 @@ $\frac{1}{1+\log\frac{n}{n+1}} \le \frac{1}{1+\log\frac{2}{3}} \lt 2.41$
 假设上面的猜测在$n\ge 2$时，对于$\lfloor n/2 \rfloor$和$\lceil n/2 \rceil$ 是成立的，那么带入递归式右边可得：
 $$
 \begin{align}
-f(n)=&f(\lfloor n/2 \rfloor) + f(\lceil n/2 \rceil) + bn\\
-\ge&cb\lfloor n/2 \rfloor\log(\lfloor n/2 \rfloor) + d\lfloor n/2 \rfloor + cb\lceil n/2 \rceil\log(\lceil n/2 \rceil) + d\lceil n/2 \rceil + bn\\
+f(n)=&f(\lfloor n/2 \rfloor) + f(\lceil n/2 \rceil) + bn \\ 
+\ge&cb\lfloor n/2 \rfloor\log(\lfloor n/2 \rfloor) + d\lfloor n/2 \rfloor + cb\lceil n/2 \rceil\log(\lceil n/2 \rceil) + d\lceil n/2 \rceil + bn \\ 
 \ge&cb\lfloor n/2 \rfloor\log(\lfloor n/2 \rfloor) + d\lfloor n/2 \rfloor + cb\lceil n/2 \rceil\log(\lfloor n/2 \rfloor) + d\lceil n/2 \rceil + bn\\
 =&cbn\log (\lfloor n/2 \rfloor) + dn + bn\\
 \ge&cbn\log(n/4) + dn +bn\\
@@ -368,9 +368,9 @@ $T(n)=aT(n/b) + f(n)$
 
 将T(n)分下面三种情况进行讨论：
 
-- 若 $f(n) = O(n^{\log_b a-\epsilon})$，其中 $\epsilon > 0$，则 $T(n)=\Theta(n^{\log_b a})$
+- 若 $f(n) = O(n^{\log_b a-\epsilon})$，其中 $\epsilon \gt 0$，则 $T(n)=\Theta(n^{\log_b a})$
 - 若 $f(n)=\Theta(n^{\log_b a})$，则 $T(n)=\Theta(n^{\log_b a}\lg n)$
-- 若 $f(n)=\Omega(n^{\log_b a +\epsilon})$，其中 $\epsilon > 0$，并且如果 $af(n/b) \le cf(n)$，对于大于1的常数 *c* 以及足够大的 *n* 满足，则 $T(n)=\Theta(f(n))$
+- 若 $f(n)=\Omega(n^{\log_b a +\epsilon})$，其中 $\epsilon \gt 0$，并且如果 $af(n/b) \le cf(n)$，对于大于1的常数 *c* 以及足够大的 *n* 满足，则 $T(n)=\Theta(f(n))$
 
 下面介绍一些使用主定理求解递归式的例子：
 
@@ -424,17 +424,17 @@ $f(n) = n\lg n = \Omega(n^{\log_43+\epsilon})$，其中$\epsilon = 1 - \log_43\a
 
 \- 否则，找到这个数组比较靠近"中间"的元素记为 *mm*，然后通过下面的方法将数组划分为三组：
 
-​	- $A_1=\{a|a < mm\}$
+​	- $A_1=\{a|a \lt mm\}$
 
 ​	- $A_2=\{a|a=mm\}$
 
-​	- $A_3=\{a|a>mm\}$
+​	- $A_3=\{a|a \gt mm\}$
 
 ​	那么，可以分下面几种情况讨论：
 
 ​	\#1. 若$|A_1| \ge k$，那么数组中第 *k* 小的元素必然在集合 $A_1$中，继续在 $A_1$ 中找第 *k* 小的元素
 
-​	\#2. 若$|A_1| < k, |A_1| + |A_2|\ge k$，那么数组中第 *k* 小的元素就在 $A_2$ 中，所以第 *k* 小的元素就是 *mm*
+​	\#2. 若$|A_1| \lt k, |A_1| + |A_2|\ge k$，那么数组中第 *k* 小的元素就在 $A_2$ 中，所以第 *k* 小的元素就是 *mm*
 
 ​	\#3. 若$|A_1 + A_2| < k$，那么数组中第 *k* 小的元素必然在 $A_2$ 中，继续在$A_2$ 中找第 $k - |A_1| - |A_2|$ 小的元素
 
@@ -450,7 +450,7 @@ $f(n) = n\lg n = \Omega(n^{\log_43+\epsilon})$，其中$\epsilon = 1 - \log_43\a
 
 下面通过一个例子来演示这个算法的过程，并且为了方便演示而取消了阈值判断过程：
 
-假设数组 A = \{ 8, 33, 17, 51, 57, 49, 35, 11, 25, 37, 14, 3, 2, 13, 52, 12, 6, 29, 32, 54, 5, 16, 22, 23, 7 \}
+假设数组 $A = \{ 8, 33, 17, 51, 57, 49, 35, 11, 25, 37, 14, 3, 2, 13, 52, 12, 6, 29, 32, 54, 5, 16, 22, 23, 7 \}$
 
 要找到数组A中的第13小的元素，也就是数组A的中位数。
 
@@ -458,9 +458,9 @@ $f(n) = n\lg n = \Omega(n^{\log_43+\epsilon})$，其中$\epsilon = 1 - \log_43\a
 
 (8, 33, 17, 51, 57), (49, 35, 11, 25, 37), (14, 3, 2, 13, 52), (12, 6, 29, 32, 54), (5, 16, 22, 23, 7)
 
-然后找到每个小组的中位数（注意到这里每个小组只有5个元素，所以找中位数的时间开销可以视为一个固定常数），并且放入集合中：M=\{ 33, 35, 13, 29, 16 \}
+然后找到每个小组的中位数（注意到这里每个小组只有5个元素，所以找中位数的时间开销可以视为一个固定常数），并且放入集合中：$M=\{ 33, 35, 13, 29, 16 \}$
 
-对 *M* 排序，M=\{ 13, 16, 29, 33, 35 \}，则 *mm* = 29
+对 *M* 排序，$M=\{ 13, 16, 29, 33, 35 \}$，则 *mm* = 29
 
 现在对原数组 *A* 进行划分：
 
@@ -541,7 +541,7 @@ T(\lfloor n/5 \rfloor) + T(\lfloor 3n/4 \rfloor) + cn &n\ge 44
 \end{cases}
 $$
 
-因为 $\frac{1}{5} + \frac{3}{4} < 1$，所以算法的时间复杂度为 $T(n) = \Theta(n)$。
+因为 $\frac{1}{5} + \frac{3}{4} \lt 1$，所以算法的时间复杂度为 $T(n) = \Theta(n)$。
 
 ### 动态规划法
 
