@@ -238,8 +238,10 @@ $$
 $$
 T(n) = 
 \begin{cases}
+\begin{split}
 \Theta(1) & if\space n=1\\
 2T(n/2) + \Theta(n) & if\space n>1
+\end{split}
 \end{cases}
 $$
 即，如果序列的长度为1，那么就无需排序，需要的时间复杂度为$\Theta(1)$，而如果序列的长度大于1，那么就这个序列划分为两个子序列，并且对子序列进行排序，然后将排好序的子序列进行合并，合并两个有序的子序列需要的时间复杂度为$\Theta(n)$。
