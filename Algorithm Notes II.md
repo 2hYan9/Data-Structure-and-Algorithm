@@ -239,7 +239,7 @@ $$
 T(n) = 
 \begin{cases}
 \begin{aligned}
-\Theta(1) & if\space n=1\\  
+\Theta(1) & if\space n=1 \\\
 2T(n/2) + \Theta(n) & if\space n>1
 \end{aligned}
 \end{cases}
