@@ -164,14 +164,14 @@ $$
 
 比如：证明，$7n^4 + 2n^2+n+20\in O(n^4)$，
 $$
-\because n \ge 1\\
+\because n \ge 1 \\
 \begin{align}
 |7n^4 + 2n^2 + n + 20| &\le 7n^4 + 2n^2 + n + 20\\
 &\le 7n^4 + 2n^4 + n^4 + 20n^4\\
 &\le 30n^4
 \end{align}
 $$
-所以我们可以取常数 $c=30, N=1, \forall n > N,7n^4 + 20n^2 +n + 20 \lt c*n^4$
+所以我们可以取常数 $c=30, N=1, \forall n \gt N,7n^4 + 20n^2 +n + 20 \lt c*n^4$
 
 
 
@@ -195,7 +195,7 @@ $8n\log n$  and  $0.01n^2$
 
 **Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n \gt N, f(n)$的下界为$g(n)$的常数倍，即：
 $$
-\Omega(g) =_{def} \{f|\exist c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
+\Omega(g) =_{def} \{f|\exists c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
 $$
 渐进下界是十分有用的，因为==渐进下界能够表示这个算法的执行至少需要这么多的时间==。
 
@@ -207,7 +207,7 @@ $$
 
 **Def.**如果一个函数的渐进上界和渐进下界是相等的，那么就可以使用Big-$\Theta$ 的概念：
 $$
-\Theta(g) =_{def} \{f|\exist c1,c2, N.\forall n > N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
+\Theta(g) =_{def} \{f|\exists c1,c2, N.\forall n > N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
 $$
 三种渐进分析的图形化表示如下图：
 
@@ -254,16 +254,19 @@ $$
 
 比如说有下面这样的一个递归式：
 $$
-T(n) = \begin{cases}d & if\space n=1\\aT(n/b) + f(n) & if\space n>1\end{cases}
+T(n) = \begin{cases}
+d & if\space n=1 \\
+aT(n/b) + f(n) & if\space n>1 \\
+\end{cases}
 $$
 在这个式子中，原问题被分解为a个子问题，每个子问题的规模为原来的 1/b 倍，而将这个a个子问题的解合并成原问题的解需要的时间为f(n)，而解决一个base case所需的时间为常数d。
 
 最容易想到的方法就是对递归式进行展开：
 $$
 \begin{align}
-T(n) &=aT(\frac{n}{b}) + f(n)\\
-T(\frac{n}{b})&=a(\frac{n}{b^2}) + f(\frac{n}{b})\\
-\cdots\\
+T(n) &=aT(\frac{n}{b}) + f(n) \\
+T(\frac{n}{b})&=a(\frac{n}{b^2}) + f(\frac{n}{b}) \\
+\cdots \\
 T(n)&=a^kT(\frac{n}{b^k})+\sum_{i=0}^{k}a^if(\frac{n}{b^i})
 \end{align}
 $$
