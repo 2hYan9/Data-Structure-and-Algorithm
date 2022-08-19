@@ -152,9 +152,9 @@ return Optional.empty();
 
 #### Big-O: 渐进上界
 
-**Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的上界为$g(n)$的常数倍，即：
+**Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n\gt N, f(n)$的上界为$g(n)$的常数倍，即：
 $$
-O(g) =_{def} \{f|\exist c,N. \forall n\gt N. |f(n)| \le c|g(n)|\}
+O(g) =_{def} \{f|\exist c,N. \forall n \gt N. |f(n)| \le c|g(n)|\}
 $$
 比如：$\lambda n.0.4n^5 + 3n^3 + 253\in O(\lambda n.n^5)$
 
