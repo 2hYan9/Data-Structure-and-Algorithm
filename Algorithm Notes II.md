@@ -154,7 +154,7 @@ return Optional.empty();
 
 **Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n\gt N, f(n)$的上界为$g(n)$的常数倍，即：
 $$
-O(g) =_{def} \{f| \exist c,N. \forall n \gt N. |f(n)| \le c|g(n)|\}
+O(g) =_{def} \{f| \exists c,N. \forall n \gt N. |f(n)| \le c|g(n)|\}
 $$
 比如：$\lambda n.0.4n^5 + 3n^3 + 253\in O(\lambda n.n^5)$
 
@@ -164,14 +164,14 @@ $$
 
 比如：证明，$7n^4 + 2n^2+n+20\in O(n^4)$，
 $$
-\because n\ge 1\\
+\because n \ge 1\\
 \begin{align}
 |7n^4 + 2n^2 + n + 20| &\le 7n^4 + 2n^2 + n + 20\\
 &\le 7n^4 + 2n^4 + n^4 + 20n^4\\
 &\le 30n^4
 \end{align}
 $$
-所以我们可以取常数 $c=30, N=1, \forall n > N,7n^4 + 20n^2 +n + 20 < c*n^4$
+所以我们可以取常数 $c=30, N=1, \forall n > N,7n^4 + 20n^2 +n + 20 \lt c*n^4$
 
 
 
@@ -193,7 +193,7 @@ $8n\log n$  and  $0.01n^2$
 
 #### Big-$\Omega$: 渐进下界
 
-**Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的下界为$g(n)$的常数倍，即：
+**Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n \gt N, f(n)$的下界为$g(n)$的常数倍，即：
 $$
 \Omega(g) =_{def} \{f|\exist c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
 $$
