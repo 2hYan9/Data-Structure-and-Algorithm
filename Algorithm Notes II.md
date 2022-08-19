@@ -237,12 +237,12 @@ $$
 比如归并排序就是一种比较典型的分治思想的算法，把对一个序列的排序工作划分成对两个子序列的排序工作：
 $$
 T(n) = 
-\begin{cases}
+\begin{equation}
 \begin{split}
 \Theta(1) & if\space n=1\\
 2T(n/2) + \Theta(n) & if\space n>1
 \end{split}
-\end{cases}
+\end{equation}
 $$
 即，如果序列的长度为1，那么就无需排序，需要的时间复杂度为$\Theta(1)$，而如果序列的长度大于1，那么就这个序列划分为两个子序列，并且对子序列进行排序，然后将排好序的子序列进行合并，合并两个有序的子序列需要的时间复杂度为$\Theta(n)$。
 
