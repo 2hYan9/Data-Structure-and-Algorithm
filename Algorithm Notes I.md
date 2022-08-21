@@ -1110,7 +1110,40 @@ int main(){
 
 注意上面的代码中的round()函数是math.h头文件中的，其限定名称是std::round。
 
-这样的算法能够在时间复杂度`O(n)`的情况下找一个序列中第K大的数字，即使在最糟糕的情况下时间复杂度也不会超过`O(n^2)`。
+这样的算法能够在时间复杂度`O(n)`的情况下找一个序列中第K大的数字，即使在最糟糕的情况下时间复杂度也不会超过`O(n^2)`。  
+    
+研究生入学考试复试的算法问题：如何使用仿真的方法估算圆周率？  
+使用随机算法：  
+如果有一个n $\times$ n的矩阵，随机生成一些这个矩阵范围内的点，假设一共生成了N个点，而落在圆内的点的个数为m，那么可以根据几何概型估算圆周率  
+假设正方形变长为a，那么这个正方形内的随机一个点落在该正方形的内接圆内的概率为：$\frac{\pi a^2}{4a^2} = \frac{\pi}{4} = \frac{m}{N}$  
+$\pi = \frac{4 \times m}{N}$  
+而确定一个随机生成的点是否在这个矩阵的内接圆内的方法是：计算这个点到圆心的距离是否小于或等于该内接圆的半径  
+当然，在实现这个算法的时候并不需要开一个矩阵的空间，因为这里只需要直到落在圆内的点的个数，实际实现需要使用到[随机选择](./Algorithm%20Notes%20I.md#random_select)这一部分的内容，具体代码如下：  
+```c++
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <cmath>
+
+int main(){
+    using namespace std;
+    srand((unsigned)time(NULL));
+    const int N = 10000;
+    const int R = 50;
+    int count = 0;
+    for(int i = 0; i < N; i++){
+        int row = round((1.0 * rand() / RAND_MAX) * 100);
+        int col = round((1.0 * rand() / RAND_MAX) * 100);
+        double r = sqrt((row - R) * (row - R) + (col - R) * (col - R));
+        if(r <= R)
+            count++;
+    }
+    double Pi = (count * 4.0) / N;
+    cout << Pi << endl;
+    return 0;
+}
+```
+代码执行的结果如下：`3.1436`，可以发现，利用随机算法能够得到一个仿真的结果。
 
 <span id = "search"></span>
 
