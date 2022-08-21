@@ -35,3 +35,9 @@
 
 此外，这个仓库中还有一些算法导论的内容，包括算法复杂度分析，以及常见的算法思想，比如分治法、动态规划法、贪心法、回溯法，以及随机算法和NP完全问题。这部分内容在文件 "Algorithm Notes II.md" 中可以找到，这也是本人在东南大学网络空间安全学院研究生一年级学习算法设计与分析课程的笔记。
 
+
+ref.
+《算法笔记》
+*Algorithms Design Techniques and Analysis*
+《算法导论》
+*Introduction to Algorithms*
