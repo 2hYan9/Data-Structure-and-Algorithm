@@ -39,5 +39,4 @@
 ref.  
 《算法笔记》  
 *Algorithms Design Techniques and Analysis*  
-《算法导论》  
 *Introduction to Algorithms*  
