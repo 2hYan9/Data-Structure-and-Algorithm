@@ -32,38 +32,6 @@
 - [搜索算法](./Algorithm%20Notes%20I.md#search)：介绍了几种搜索算法，用于找到某个顺序结构中某个目标的位置
   
 上面的文件中只是简单的介绍了一部分算法相关的内容，而没有涉及到算法分析，比如算法的时间复杂度和空间复杂度等。  
->研究生入学考试复试的算法问题：如何使用仿真的方法估算圆周率？  
->使用随机算法：  
->如果有一个n $\times$ n的矩阵，随机生成一些这个矩阵范围内的点，假设一共生成了N个点，而落在圆内的点的个数为m，那么可以根据几何概型估算圆周率  
->假设正方形变长为a，那么这个正方形内的随机一个点落在该正方形的内接圆内的概率为：$\frac{\pi a^2}{4a^2} = \frac{\pi}{4} = \frac{m}{N}$  
->$\pi = \frac{4 \times m}{N}$  
->而确定一个随机生成的点是否在这个矩阵的内接圆内的方法是：计算这个点到圆心的距离是否小于或等于该内接圆的半径  
->当然，在实现这个算法的时候并不需要开一个矩阵的空间，因为这里只需要直到落在圆内的点的个数，实际实现需要使用到[随机选择](./Algorithm%20Notes%20I.md#random_select)这一部分的内容，具体代码如下：  
->```c++
->#include <iostream>
->#include <ctime>
->#include <cstdlib>
->#include <cmath>
->
->int main(){
->    using namespace std;
->    srand((unsigned)time(NULL));
->    const int N = 10000;
->    const int R = 50;
->    int count = 0;
->    for(int i = 0; i < N; i++){
->        int row = round((1.0 * rand() / RAND_MAX) * 100);
->        int col = round((1.0 * rand() / RAND_MAX) * 100);
->        double r = sqrt((row - R) * (row - R) + (col - R) * (col - R));
->        if(r <= R)
->            count++;
->    }
->    double Pi = (count * 4.0) / N;
->    cout << Pi << endl;
->    return 0;
->}
->```
->代码执行的结果如下：`3.1436`
 
 此外，这个仓库中还有一些算法导论的内容，比如算法分析，以及常见的算法思想，比如分治法、动态规划法、贪心法、回溯法，以及随机算法和NP完全问题。这部分内容在文件 "Algorithm Notes II.md" 中可以找到，这也是本人在东南大学网络空间安全学院研究生一年级学习算法设计与分析课程的笔记。
 
