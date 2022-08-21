@@ -28,7 +28,7 @@
 - [贪心算法](./Algorithm%20Notes%20I.md#greedy)：这里主要是介绍通过子问题的最优解达到主问题的最优解的算法思想
 - [二分算法](./Algorithm%20Notes%20I.md#binary)：这一部分内容主要是通过二分算法解决一些问题，比如通过二分搜索计算$\sqrt{2}$以及快速幂
 - [two pointers](./Algorithm%20Notes%20I.md#two_pointers)：two pointers是一种算法思想，这里介绍了一些使用这个思想来降低时间复杂度的排序算法，比如归并排序和快速排序
-- [随机选择](./Algorithm%20Notes%20I.md#random_select)：承接上一节的快速排序，利用随机的主元避免最糟糕情况，以及使用随机选择的方法在O(n) 时间复杂度内找到第 k 小元素
+- [随机选择](./Algorithm%20Notes%20I.md#random_select)：承接上一节的快速排序，利用随机的主元避免最糟糕情况，以及快速找到第 k 小元素的方法
 - [搜索算法](./Algorithm%20Notes%20I.md#search)：介绍了几种搜索算法，用于找到某个顺序结构中某个目标的位置
   
 上面的文件中只是简单的介绍了一部分算法相关的内容，而没有涉及到算法分析，比如算法的时间复杂度和空间复杂度等。  
