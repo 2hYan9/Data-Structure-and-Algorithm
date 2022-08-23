@@ -1163,8 +1163,8 @@ $HAMILTONIAN\_CYCLE\propto_{poly}TRAVELING\_SALESMAN$
 构造 *G' = (V, E')* 如下：
 $E'=\lbrace (u,v)|u,v\in V \rbrace$
 并为每条边分配长度如下：
-*l(e) = 1* , if $e\in E$
-*l(e) = n* , if $e\notin E$
+*l(e) = 1* , if $e\in E$  
+*l(e) = n* , if $e\notin E$  
 其中 *n = |V|*，并且设定 *k = n*。
 
 那么显然，*G* 中有一个Hamiltonian回路当且仅当 *G'* 中有一个长度刚好为 *n* 的访问路径，这个访问路径能够访问 *V* 中每个节点仅一次且返回起点。
