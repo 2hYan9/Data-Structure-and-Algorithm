@@ -152,7 +152,7 @@ $$
 比如：证明，$7n^4 + 2n^2+n+20\in O(n^4)$，
 
 $$
-\because n\ge 1\\
+since\space n\ge 1\\
 \begin{align}
 |7n^4 + 2n^2 + n + 20| &\le 7n^4 + 2n^2 + n + 20\\
 &\le 7n^4 + 2n^4 + n^4 + 20n^4\\
