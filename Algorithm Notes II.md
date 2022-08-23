@@ -140,7 +140,7 @@ return Optional.empty();
 **Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的上界为$g(n)$的常数倍，即：
 
 $$
-O(g) =_{def} \{f|\exist c,N. \forall n\gt N. |f(n)| \le c|g(n)|\}
+O(g) =_{def} \{f|\exists c,N. \forall n\gt N. |f(n)| \le c|g(n)|\}
 $$
 
 比如：$\lambda n.0.4n^5 + 3n^3 + 253\in O(\lambda n.n^5)$
@@ -183,7 +183,7 @@ $8n\log n$  and  $0.01n^2$
 **Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的下界为$g(n)$的常数倍，即：
 
 $$
-\Omega(g) =_{def} \{f|\exist c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
+\Omega(g) =_{def} \{f|\exists c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
 $$
 
 渐进下界是十分有用的，因为==渐进下界能够表示这个算法的执行至少需要这么多的时间==。
@@ -197,7 +197,7 @@ $$
 **Def.**如果一个函数的渐进上界和渐进下界是相等的，那么就可以使用Big-$\Theta$ 的概念：
 
 $$
-\Theta(g) =_{def} \{f|\exist c1,c2, N.\forall n > N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
+\Theta(g) =_{def} \{f|\exists c1,c2, N.\forall n > N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
 $$
 
 三种渐进分析的图形化表示如下图：
@@ -244,7 +244,7 @@ $$
 比如说有下面这样的一个递归式：
 
 $$
-T(n) = \begin{cases}d & if\space n=1\\aT(n/b) + f(n) & if\space n>1\end{cases}
+T(n) = \begin{cases}d & if\space n=1\\ aT(n/b) + f(n) & if\space n>1\end{cases}
 $$
 
 在这个式子中，原问题被分解为a个子问题，每个子问题的规模为原来的 1/b 倍，而将这个a个子问题的解合并成原问题的解需要的时间为f(n)，而解决一个base case所需的时间为常数d。
@@ -366,9 +366,9 @@ $T(n)=aT(n/b) + f(n)$
 
 将T(n)分下面三种情况进行讨论：
 
-- 若 $f(n) = O(n^{\log_b a-\epsilon})$，其中 $\epsilon > 0$，则 $T(n)=\Theta(n^{\log_b a})$
+- 若 $f(n) = O(n^{\log_b a-\epsilon})$，其中 $\epsilon \gt 0$，则 $T(n)=\Theta(n^{\log_b a})$
 - 若 $f(n)=\Theta(n^{\log_b a})$，则 $T(n)=\Theta(n^{\log_b a}\lg n)$
-- 若 $f(n)=\Omega(n^{\log_b a +\epsilon})$，其中 $\epsilon > 0$，并且如果 $af(n/b) \le cf(n)$，对于大于1的常数 *c* 以及足够大的 *n* 满足，则 $T(n)=\Theta(f(n))$
+- 若 $f(n)=\Omega(n^{\log_b a +\epsilon})$，其中 $\epsilon \gt 0$，并且如果 $af(n/b) \le cf(n)$，对于大于1的常数 *c* 以及足够大的 *n* 满足，则 $T(n)=\Theta(f(n))$
 
 下面介绍一些使用主定理求解递归式的例子：
 
