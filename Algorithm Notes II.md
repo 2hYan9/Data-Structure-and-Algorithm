@@ -1160,7 +1160,7 @@ $HAMILTONIAN\_CYCLE\propto_{poly}TRAVELING\_SALESMAN$
 
 令 *G = (V, E)* 是Hamiltonian回路问题的任意一个实例，构造一个带权重的图 *G' = (V, E')* 以及一个边界 *k* 满足这样的条件：*G* 有一个Hamiltonian回路当且仅当 *G'* 有一个长度不超过 *k* 的访问路径，能够访问每个节点仅一次且回到起点。
 
-构造 *G' = (V, E')* 如下：
+构造 *G' = (V, E')* 如下：  
 $E'=\lbrace (u,v)|u,v\in V \rbrace$
 并为每条边分配长度如下：
 *l(e) = 1* , if $e\in E$  
