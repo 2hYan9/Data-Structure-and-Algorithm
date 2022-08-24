@@ -35,7 +35,16 @@
 
 此外，这个仓库中还有一些算法导论的内容，包括算法复杂度分析，以及常见的算法思想，比如分治法、动态规划法、贪心法、回溯法，以及随机算法和NP完全问题。这部分内容在文件 "Algorithm Notes II.md" 中可以找到，这也是本人在东南大学网络空间安全学院研究生一年级学习算法设计与分析课程的笔记。  
 
-文件"Algorithm Notes II" 的目录如下：  
+文件"[Algorithm Notes II](./Algorithm%20Notes%20II.md)" 的目录如下：
+- [算法分析](./Algorithm%20Notes%20II.md#analysis)：介绍算法分析的一些数学基础，比如机器无关的概念和渐进分析的方法
+- [分治法](./Algorithm%20Notes%20II.md#divide_and_conquer)：包括求解递归式的方法，以及使用分治法在O(n)内找到序列中第 *k* 小元素的方法
+- [动态规划法](./Algorithm%20Notes%20II.md#dynamic_programing)：动态规划和分治法类似，都是基于递归的方法，但动态规划有子问题重叠性，这里通过最大公共子序列问题介绍了这个概念
+- [贪心法](./Algorithm%20Notes%20II.md#greedy)：贪心法和动态规划类似，都具有最优子结构性质，但是贪心是基于迭代的方法，这里介绍了最小生成树和Huffman编码问题
+- [回溯法](./Algorithm%20Notes%20II.md#backtracking)：回溯法可以理解为一种有组织的穷举搜索(organiazed exhaustive search)，这里介绍了3-着色问题，这部分内容还包括分支限界方法
+- [随机算法](./Algorithm%20Notes%20II.md#random)：这里介绍了如何在算法的设计中利用随机性提高算法的求解速度
+- [NP-完全问题](./Algorithm%20Notes%20II.md#NP-complete)：这里对NP-完全问题的概念进行了介绍，并演示了如何证明一个问题是NP-完全的
+
+这个问题的内容比较偏向于概念的内容，以及相关的数学证明，对于实战中的应用可能不是很关键。
 
 ref.  
 《算法笔记》  
