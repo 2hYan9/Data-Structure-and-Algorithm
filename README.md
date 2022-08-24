@@ -41,7 +41,7 @@
 - [动态规划法](./Algorithm%20Notes%20II.md#dynamic_programing)：动态规划和分治法类似，都是基于递归的方法，但动态规划有子问题重叠性，这里通过最大公共子序列问题介绍了这个概念
 - [贪心法](./Algorithm%20Notes%20II.md#greedy)：贪心法和动态规划类似，都具有最优子结构性质，但是贪心是基于迭代的方法，这里介绍了最小生成树和Huffman编码问题
 - [回溯法](./Algorithm%20Notes%20II.md#backtracking)：回溯法可以理解为一种有组织的穷举搜索(organiazed exhaustive search)，这部分内容还包括分支限界方法的介绍
-- [随机算法](./Algorithm%20Notes%20II.md#random)：这里介绍了如何在算法的设计中利用随机性提高算法的求解速度，包括Las Vegas和Monte Carlo算法。
+- [随机算法](./Algorithm%20Notes%20II.md#random)：这里介绍了如何在算法的设计中利用随机性提高算法的求解速度，包括Las Vegas和Monte Carlo算法
 - [NP-完全问题](./Algorithm%20Notes%20II.md#NP-complete)：这里对NP-完全问题的概念进行了介绍，并演示了如何证明一个问题是NP-完全的
 
 这个问题的内容比较偏向于概念的内容，以及相关的数学证明，对于实战中的应用可能不是很关键，里面所介绍的一些经典问题的思路更加重要。
