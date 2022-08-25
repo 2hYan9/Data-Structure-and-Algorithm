@@ -57,6 +57,10 @@ int main() {
 
  此外，当容器是vector类时，可以通过`*(it + i)`的方式访问vector容器中的第i个元素：
 
+> 参阅《STL源码剖析》可知，这里之所以能够使用这样的方式访问容器内的元素是因为vector底层采用线性的数据结构，因此vector的迭代器分类是Random Access Iterator，即支持随机访问的迭代器。
+
+下面是一个vector应用的实例。
+
 ```c++
 #include <iostream>
 #include <vector>
