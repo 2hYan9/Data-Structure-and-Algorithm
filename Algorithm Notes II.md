@@ -138,7 +138,7 @@ return Optional.empty();
 
 #### Big-O: 渐进上界
 
-**Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的上界为$g(n)$的常数倍，即：
+**Def.** 称一个函数 *f* 属于 *O(g)* ，即$f \in O(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n \gt N, f(n)$的上界为$g(n)$的常数倍，即：
 
 $$
 O(g) =_{def} \{f|\exists c,N. \forall n\gt N. |f(n)| \le c|g(n)|\}
@@ -161,7 +161,7 @@ since\space n\ge 1\\
 \end{align}
 $$
 
-所以我们可以取常数 $c=30, N=1, \forall n > N,7n^4 + 20n^2 +n + 20 < c*n^4$
+所以我们可以取常数 $c=30, N=1, \forall n \gt N,7n^4 + 20n^2 +n + 20 < c*n^4$
 
 当输入的规模 *n* 比较大的时候，Big-O渐进上限是比较有用的。
 
@@ -181,7 +181,7 @@ $8n\log n$  and  $0.01n^2$
 
 #### Big-$\Omega$: 渐进下界
 
-**Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n > N, f(n)$的下界为$g(n)$的常数倍，即：
+**Def.** 称一个函数 *f* 属于 $\Omega(g)$ ，即$f\in \Omega(g)$，当且仅当，存在常数 *c* 和 *N* 能够满足 $\forall n \gt N, f(n)$的下界为$g(n)$的常数倍，即：
 
 $$
 \Omega(g) =_{def} \{f|\exists c,N. \forall n\gt N. |f(n)| \ge c|g(n)|\}
@@ -198,7 +198,7 @@ $$
 **Def.**如果一个函数的渐进上界和渐进下界是相等的，那么就可以使用Big-$\Theta$ 的概念：
 
 $$
-\Theta(g) =_{def} \{f|\exists c1,c2, N.\forall n > N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
+\Theta(g) =_{def} \{f|\exists c1,c2, N.\forall n \gt N.c1|g(n)| \le |f(n)| \le c2|g(n)| \}
 $$
 
 三种渐进分析的图形化表示如下图：
@@ -416,19 +416,19 @@ $f(n) = n\lg n = \Omega(n^{\log_43+\epsilon})$，其中$\epsilon = 1 - \log_43\a
 
 \- 否则，找到这个数组比较靠近"中间"的元素记为 *mm*，然后通过下面的方法将数组划分为三组：
 
-    -$A_1=\{a|a < mm\}$
+    -$A_1=\{a|a \lt mm\}$
     
     -$A_2=\{a|a=mm\}$
     
-    -$A_3=\{a|a>mm\}$
+    -$A_3=\{a|a\gt mm\}$
     
     那么，可以分下面几种情况讨论：
     
     \#1. 若$|A_1| \ge k$，那么数组中第 *k* 小的元素必然在集合 $A_1$中，继续在 $A_1$ 中找第 *k* 小的元素
     
-    \#2. 若$|A_1| < k, |A_1| + |A_2|\ge k$，那么数组中第 *k* 小的元素就在 $A_2$ 中，所以第 *k* 小的元素就是 *mm*
+    \#2. 若$|A_1| \lt k, |A_1| + |A_2|\ge k$，那么数组中第 *k* 小的元素就在 $A_2$ 中，所以第 *k* 小的元素就是 *mm*
     
-    \#3. 若$|A_1 + A_2| < k$，那么数组中第 *k* 小的元素必然在 $A_2$ 中，继续在$A_2$ 中找第 $k - |A_1| - |A_2|$ 小的元素
+    \#3. 若$|A_1 + A_2| \gt k$，那么数组中第 *k* 小的元素必然在 $A_2$ 中，继续在$A_2$ 中找第 $k - |A_1| - |A_2|$ 小的元素
     
     下面将介绍如何找到数组中靠近"中间"的元素：
     
@@ -528,7 +528,7 @@ $0.7n + 1.2 \le \lfloor 0.75n \rfloor$
 
 $$
 T(n) = \begin{cases}
-c& n < 44\\
+c& n \lt 44\\
 T(\lfloor n/5 \rfloor) + T(\lfloor 3n/4 \rfloor) + cn &n\ge 44
 \end{cases}
 $$
