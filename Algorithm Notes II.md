@@ -161,7 +161,7 @@ since\space n\ge 1\\
 \end{align}
 $$
 
-所以我们可以取常数 $c=30, N=1, \forall n \gt N,7n^4 + 20n^2 +n + 20 < c*n^4$
+所以我们可以取常数 $c=30, N=1, \forall n \gt N,7n^4 + 20n^2 +n + 20 \lt c*n^4$
 
 当输入的规模 *n* 比较大的时候，Big-O渐进上限是比较有用的。
 
